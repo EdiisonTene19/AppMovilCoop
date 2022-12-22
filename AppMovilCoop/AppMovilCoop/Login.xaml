@@ -3,30 +3,34 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppMovilCoop.Login">
     <ContentPage.Content>
-        <StackLayout VerticalOptions="Center">
+        <ScrollView>
+            <StackLayout Margin="0,20,0,20">
+                <!--<StackLayout   VerticalOptions="Start">-->
                 <!--<Label Text="MOVILCOOP" FontSize="20" HorizontalTextAlignment="Center"/>-->
-            <Image Source="logo.png"/>
-            <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                    </Grid.RowDefinitions>
+                <Image Source="logo.png" />
+                <!--</StackLayout>-->
+                <StackLayout  VerticalOptions="CenterAndExpand">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
 
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                    </Grid.ColumnDefinitions>
-
-                    <Label Text="USUARIO" FontSize="18" Grid.Row="0" Grid.Column="0"/>
-                    <Entry x:Name="txtUsuario" Placeholder="Ingrese el usuario" Grid.Row="0" Grid.Column="1"/>
-
-                    <Label Text="CLAVE" FontSize="18" Grid.Row="1" Grid.Column="0"/>
-                    <Entry x:Name="txtpassword" Placeholder="Ingrese la contraseña" IsPassword="True" Grid.Row="1" Grid.Column="1"/>
-
-
-                </Grid>
-                <Button x:Name="btnIniciar" Text="INICIAR SESION" BackgroundColor="Azure" Clicked="btnIniciar_Clicked"/>
-            <Image Source="logoeconx.png"/>
-        </StackLayout>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Label Text="USUARIO" FontSize="18" Grid.Row="0" Grid.Column="0"/>
+                        <Entry x:Name="txtUsuario" Placeholder="Ingrese el usuario" Grid.Row="0" Grid.Column="1"/>
+                        <Label Text="CLAVE" FontSize="18" Grid.Row="1" Grid.Column="0"/>
+                        <Entry x:Name="txtpassword" Placeholder="Ingrese la contraseña" IsPassword="True" Grid.Row="1" Grid.Column="1"/>
+                    </Grid>
+                    <Button x:Name="btnIniciar" Text="INICIAR SESION" BackgroundColor="Azure" Clicked="btnIniciar_Clicked"/>
+                </StackLayout>
+                <!--<StackLayout  VerticalOptions="End">-->
+                <Image Source="MovilCoopLogo.png"/>
+                <!--</StackLayout>-->
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

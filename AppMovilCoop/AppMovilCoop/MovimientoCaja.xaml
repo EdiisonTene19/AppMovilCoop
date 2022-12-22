@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppMovilCoop.MovimientoCaja">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Margin="0,20,0,20">
+                <Image Source="logo.png"/>
+                <Label Text="MOVIMIENTOS DE CAJA" FontSize="20" HorizontalTextAlignment="Center" TextColor="Green"/>
+                <Label x:Name="lblHora" HorizontalTextAlignment="Center" FontSize="16" />
+                <Label x:Name="lblUsuario" HorizontalTextAlignment="Center" FontSize="16"/>
+               
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="2*" />
+                            <RowDefinition />
+                            <RowDefinition Height="100" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+                        <BoxView/>
+                        <Label Text="Hora" HorizontalOptions="Center" VerticalOptions="Center" />
+                        <BoxView Grid.Column="1" />
+                        <Label Grid.Column="1" Text="Cliente" HorizontalOptions="Center" VerticalOptions="Center" />
+                        <BoxView Grid.Column="2" />
+                        <Label Grid.Column="2" Text="Ingresos" HorizontalOptions="Center" VerticalOptions="Center" />
+                        <BoxView Grid.Column="3" />
+                        <Label Grid.Column="3" Text="Egresos" HorizontalOptions="Center" VerticalOptions="Center" />
+                     
+                    </Grid>
+
+                <StackLayout VerticalOptions="EndAndExpand">
+                    <Image Source="MovilCoopLogo.png"/>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

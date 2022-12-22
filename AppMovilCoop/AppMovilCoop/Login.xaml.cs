@@ -20,7 +20,7 @@ namespace AppMovilCoop
         private void btnIniciar_Clicked(object sender, EventArgs e)
         {
             string usuario = "Edison";
-            string password = "12345";
+            string password = "123456";
 
             if(usuario == txtUsuario.Text && password == txtpassword.Text) 
             {

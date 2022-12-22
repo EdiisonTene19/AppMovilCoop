@@ -3,20 +3,25 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppMovilCoop.Menu">
     <ContentPage.Content>
-        <StackLayout>
-            <!--<Label Text="Menu" FontSize="20" HorizontalTextAlignment="Center"/>-->
-            <Image Source="logo.png"/>
-            <Label x:Name="lblHora" HorizontalTextAlignment="Center" FontSize="16" />
-            <Label x:Name="lblUsuario" HorizontalTextAlignment="Center" FontSize="16"/>
+        <ScrollView>
+            <StackLayout Margin="0,20,0,20">
+                <!--<Label Text="Menu" FontSize="20" HorizontalTextAlignment="Center"/>-->
+                <Image Source="logo.png"/>
+                <!--<BoxView BackgroundColor="Red" HeightRequest="1" />-->
+                <Label x:Name="lblHora" HorizontalTextAlignment="Center" FontSize="16" />
+                <Label x:Name="lblUsuario" HorizontalTextAlignment="Center" FontSize="16"/>
 
-            <Button x:Name="btnDeposito" Text="DEPOSITO" Background="blue" Clicked="btnDeposito_Clicked"/>
-            <Button x:Name="btnRetiros" Text="RETIROS" Background="red" Clicked="btnRetiros_Clicked"/>
-            <Button x:Name="btnPagoCuotasCreditos" Text="PAGO CUOTAS CREDITOS" Background="DarkOrange" Clicked="btnPagoCuotasCreditos_Clicked"/>
-            <Button x:Name="btnMovimientos" Text="MOVIMIENTOS CAJA" Background="#327600" Clicked="btnMovimientos_Clicked"/>
+                <StackLayout  VerticalOptions="CenterAndExpand">
+                    <Button x:Name="btnDeposito" Text="DEPOSITO" Background="blue" Clicked="btnDeposito_Clicked"/>
+                    <Button x:Name="btnRetiros" Text="RETIROS" Background="red" Clicked="btnRetiros_Clicked"/>
+                    <Button x:Name="btnPagoCuotasCreditos" Text="PAGO CUOTAS CREDITOS" Background="DarkOrange" Clicked="btnPagoCuotasCreditos_Clicked"/>
+                    <Button x:Name="btnMovimientos" Text="MOVIMIENTOS CAJA" Background="#327600" Clicked="btnMovimientos_Clicked"/>
+                    <Button x:Name="btnCerrarSession" Text="CERRAR SESION" Clicked="btnCerrarSession_Clicked" WidthRequest="40" HeightRequest="40" CornerRadius="40"/>
+                </StackLayout>
 
-            <Button x:Name="btnCerrarSession" Text="CERRAR SESION" Clicked="btnCerrarSession_Clicked"/>
-            <Image Source="logoeconx.png"/>
+                <Image Source="MovilCoopLogo.png"/>
 
-        </StackLayout>
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppMovilCoop.PagoCredito">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Margin="0,20,0,20">
+                <Image Source="logo.png"/>
+                <Label Text="PAGO CUOTAS DE CREDITOS" FontSize="20" HorizontalTextAlignment="Center" TextColor="DarkOrange"/>
+                <Label x:Name="lblHora" HorizontalTextAlignment="Center" FontSize="16" />
+                <Label x:Name="lblUsuario" HorizontalTextAlignment="Center" FontSize="16"/>
+                <StackLayout  VerticalOptions="CenterAndExpand">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Label Text="IDENTIFICACION" FontSize="12"  Grid.Row="0" Grid.Column="0"/>
+                        <Entry x:Name="txtIdentificacion" Placeholder="Ingrese Identificacion" Keyboard="Numeric"   Grid.Row="0" Grid.Column="1"/>
+                        <Label Text="CODIGO" FontSize="12" Grid.Row="0" Grid.Column="2"/>
+                        <Entry x:Name="txtCodigo" Placeholder="Ingrese Codigo" Keyboard="Numeric" Grid.Row="0" Grid.Column="3"/>
+                        <Label Text="APELLIDOS" FontSize="12" Grid.Row="1" Grid.Column="0"/>
+                        <Entry x:Name="txtApellidos" Placeholder="Ingrese Apellidos" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2"/>
+                        <Label Text="NOMBRES" FontSize="12" Grid.Row="2" Grid.Column="0"/>
+                        <Entry x:Name="txtNombres" Placeholder="Ingrese Nombres" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2"/>
+                        <Button x:Name="btnConsultar" Text="BUSCAR" Clicked="btnConsultar_Clicked" Grid.Row="1" Grid.Column="3" BackgroundColor="Aqua"/>
+                        <Label Text="CREDITOS" FontSize="12" Grid.Row="3" Grid.Column="0"/>
+                        <!--<Picker x:Name="txtCuentas" Title="Seleccione" ItemsSource="{Binding oListaProvincia}" ItemDisplayBinding="{Binding nombreprovincia}" SelectedIndexChanged="PickerProvincia_SelectedIndexChanged" />-->
+                        <Picker x:Name="txtCreditos" Title="Seleccione" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2"/>
+                        <Label Text="V.MINIMO" FontSize="12" Grid.Row="4" Grid.Column="0"/>
+                        <Entry x:Name="txtMinimo" Placeholder="Ingrese Valor" Grid.Row="4" Grid.Column="1"/>
+                        <Label Text="V.MAXIMO" FontSize="12" Grid.Row="4" Grid.Column="2"/>
+                        <Entry x:Name="txtMaximo" Placeholder="Ingrese Valor" Grid.Row="4" Grid.Column="3"/>
+
+                        <Label Text="V.EFECTIVO" FontSize="12" Grid.Row="5" Grid.Column="0"/>
+                        <Entry x:Name="txtValor" Placeholder="Ingrese Valor" Keyboard="Numeric" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2"/>
+                        <!--campo para visualizar las firmas-->
+                    </Grid>
+                    <Button x:Name="btnGrabar" Text="GRABAR" WidthRequest="40" HeightRequest="40" CornerRadius="40" BackgroundColor="Blue" Clicked="btnGrabar_Clicked"/>
+                    <Button x:Name="btnCancelar" Text="CANCELAR" WidthRequest="40" HeightRequest="40" CornerRadius="40" BackgroundColor="PaleVioletRed" Clicked="btnCancelar_Clicked"/>
+                </StackLayout>
+                <Image Source="MovilCoopLogo.png"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
